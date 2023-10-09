@@ -17,9 +17,4 @@ EXPOSE 8082
 
 RUN rm -rf Deadline-10.2.0.9-*
 
-RUN mkdir /opt/jfp_deadline
-COPY deadline_launch.sh /opt/jfp_deadline/
-WORKDIR /opt/jfp_deadline
-RUN chmod 755 deadline_launch.sh
-
-ENTRYPOINT ["./deadline_launch.sh"]
+ENTRYPOINT ["/opt/Thinkbox/Deadline10/bin/deadlinelauncher.exe -nogui -noslave -rcs -webservice"]
