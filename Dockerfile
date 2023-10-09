@@ -1,8 +1,5 @@
 FROM centos:7
 
-RUN yum -y upgrade
-RUN yum install -y redhat-lsb libX11 libXext mesa-libGL
-
 RUN mkdir /tmp/Thinkbox
 
 COPY Deadline-10.2.0.9-linux-installers.tar /tmp/Thinkbox/
@@ -17,4 +14,4 @@ EXPOSE 8082
 
 RUN rm -rf Deadline-10.2.0.9-*
 
-ENTRYPOINT ["/opt/Thinkbox/Deadline10/bin/deadlinelauncher.exe -nogui -noslave -rcs -webservice"]
+ENTRYPOINT ["/opt/Thinkbox/Deadline10/bin/deadlinewebservice.exe"]
