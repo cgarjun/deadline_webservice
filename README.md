@@ -1,2 +1,2 @@
 # deadline_client
-Deadline client docker image
+Please make sure you have the deadline installer tar file for linux in the root of the repo
